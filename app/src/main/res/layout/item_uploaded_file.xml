@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#1e4e62">
+    <TextView
+        android:id="@+id/file_name"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textStyle="italic"
+        android:text="file name"
+        android:textColor="#fffef6"
+        android:textSize="18sp"
+        android:ellipsize="end"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        />
+    <ImageButton
+        android:id="@+id/remove_upload"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="12dp"
+        android:src="@drawable/close_svgrepo_com"
+        android:background="@android:color/transparent"
+        android:contentDescription="remove uploads"
+        android:scaleType="fitCenter"
+        />
+
+</LinearLayout>

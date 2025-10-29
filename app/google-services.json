@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "834489411402",
+    "project_id": "onemed-20caa",
+    "storage_bucket": "onemed-20caa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834489411402:android:1c3afb28fc9a30532003b3",
+        "android_client_info": {
+          "package_name": "com.example.onemed"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2vWuxnbykKIjyUHj5KIgFF6LCwwniY3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

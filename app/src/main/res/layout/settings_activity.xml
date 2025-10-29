@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top Bar -->
+    <View
+        android:id="@+id/top_layer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/top_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="9dp"
+        android:contentDescription="@string/back"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back_svgrepo_com"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Page Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textColor="@color/cardview_light_background"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintTop_toTopOf="@id/top_layer"
+        app:layout_constraintBottom_toBottomOf="@id/top_layer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ScrollView for settings -->
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:contentDescription="Main scroll settings area"
+        app:layout_constraintTop_toBottomOf="@id/top_layer"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/settings_container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Theme Switch -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:text="Light/ Dark Theme" />
+
+                <Switch
+                    android:id="@+id/switch_theme"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"/>
+            </LinearLayout>
+
+            <!-- Notification Switch
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:text="Notifications" />
+
+                <Switch
+                    android:id="@+id/switch_notifications"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"/>
+            </LinearLayout> -->
+
+
+            <!-- Security Settings Toggle Button -->
+            <com.google.android.material.button.MaterialButton
+            android:id="@+id/sign_out"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+                android:textColor="#fff6ff"
+            android:backgroundTint="#7d2c49"
+            android:text="Sign out"
+            android:textSize="16sp"
+            app:cornerRadius="16dp"
+                app:icon="@drawable/sign_out_svgrepo_com"
+                app:iconGravity="textEnd"
+                app:iconPadding="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/switch_theme"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/security_toggle"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:backgroundTint="#ff7f0d"
+                android:text="Security Settings"
+                android:textSize="16sp"
+                app:cornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sign_out" />
+
+
+            <!-- Security Settings Container (Initially GONE) -->
+            <LinearLayout
+                android:id="@+id/security_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:paddingTop="12dp">
+
+                <!-- Change Password -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change Password"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp" />
+
+                <EditText
+                    android:id="@+id/old_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:hint="Old Password"
+                    android:inputType="textPassword" />
+
+                <EditText
+                    android:id="@+id/new_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:hint="New Password"
+                    android:inputType="textPassword" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/change_password"
+                    android:layout_width="200dp"
+                    android:layout_height="54dp"
+                    android:backgroundTint="#ff7f0d"
+                    android:text="change password"
+                    android:textSize="12sp"
+                    app:cornerRadius="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/new_password" />
+
+                <!-- Change Email -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change Email"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp" />
+
+                <EditText
+                    android:id="@+id/new_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="New Email"
+                    android:minHeight="48dp"
+                    android:inputType="textEmailAddress" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/change_email"
+                    android:layout_width="200dp"
+                    android:layout_height="54dp"
+                    android:backgroundTint="#ff7f0d"
+                    android:text="change email"
+                    android:textSize="12sp"
+                    app:cornerRadius="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/new_email" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
