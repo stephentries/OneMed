@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- styles.xml -->
+    <style name="MyTextInputStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="hintTextAppearance">@style/MyHintTextAppearance</item>
+        <item name="boxStrokeColor">@color/text_input_box_stroke_color</item>
+        <item name="boxBackgroundColor">#f1f1e6</item>
+        <item name="boxStrokeWidth">3dp</item>
+        <item name="endIconMode">clear_text</item>
+    </style>
+
+    <style name="MyHintTextAppearance" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">@color/hint_color</item> <!-- Use a color here -->
+    </style>
+
+
+</resources>

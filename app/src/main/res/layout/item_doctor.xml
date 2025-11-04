@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/doctor_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="#e8fcff">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Doctor Name -->
+        <TextView
+            android:id="@+id/DoctorName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Doctor Name"
+            android:textStyle="bold"
+            android:textColor="#354954"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/DoctorPic" />
+
+
+        <!-- Doctor pic-->
+
+        <ImageView
+            android:id="@+id/DoctorPic"
+            android:layout_width="100dp"
+            android:layout_height="103dp"
+            android:layout_marginEnd="4dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/hospital_location"
+            android:scaleType="fitXY"
+            android:src="@drawable/thomson"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--specialty-->
+        <TextView
+            android:id="@+id/specialty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="specialty"
+            android:textColor="#354954"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/DoctorName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- hospitals -->
+        <TextView
+            android:id="@+id/hospital_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="hospitals"
+            android:textColor="#354954"
+            android:textSize="14sp"
+
+
+            android:ellipsize="none"
+            android:maxLines="3"
+            android:scrollHorizontally="false"
+            android:singleLine="false"
+            android:breakStrategy="simple"
+
+            app:layout_constraintTop_toBottomOf="@id/specialty"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/DoctorPic" />
+
+        <!-- AvailableDays -->
+        <TextView
+            android:id="@+id/availableDays"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/available_days"
+            android:textColor="#354954"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hospital_list" />
+
+        <!-- AvailableTimeSlot -->
+        <TextView
+            android:id="@+id/availableTimeSlot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/available_time_slots"
+            android:textColor="#354954"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/availableDays" />
+
+
+        <TextView
+            android:id="@+id/language"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/language_spoken"
+            android:textColor="#354954"
+            android:textSize="14sp"
+
+
+            android:ellipsize="none"
+            android:maxLines="3"
+            android:scrollHorizontally="false"
+            android:singleLine="false"
+            android:breakStrategy="simple"
+
+            app:layout_constraintEnd_toStartOf="@id/DoctorPic"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/availableTimeSlot" />
+
+        <TextView
+            android:id="@+id/doc_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="doc number"
+            android:textColor="#354954"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/language" />
+
+        <RatingBar
+            android:id="@+id/Doc_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="0.4"
+            android:scaleY="0.4"
+            android:isIndicator="true"
+            app:layout_constraintEnd_toEndOf="@id/DoctorPic"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="@id/DoctorPic"
+            app:layout_constraintTop_toBottomOf="@id/DoctorPic" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
